@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Secrets — synthetic data only, but never commit keys
+.env
+
+# Models / data artifacts
+backend/app/classifier/checkpoints/
+*.pt
+*.safetensors
+
+# OS
+.DS_Store

@@ -1,0 +1,39 @@
+# --- Web / async ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+websockets==13.1
+pydantic-settings==2.5.2
+
+# --- DB ---
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.9
+pgvector==0.3.4
+alembic==1.13.3
+
+# --- Queue ---
+redis==5.0.8
+rq==2.0.0
+
+# --- LLM / MCP / tools ---
+anthropic==0.34.2
+mcp==1.1.2
+sentence-transformers==3.1.1
+ollama==0.3.3
+
+# --- Observability ---
+opentelemetry-sdk==1.27.0
+opentelemetry-exporter-otlp==1.27.0
+arize-phoenix==5.5.0
+openinference-instrumentation-anthropic==0.1.4
+structlog==24.4.0
+
+# --- Evals ---
+ragas==0.2.5
+deepeval==2.0.5
+
+# --- Load testing (dev only) ---
+locust==2.31.8
+
+# --- Testing ---
+pytest==8.3.3
+pytest-asyncio==0.24.0

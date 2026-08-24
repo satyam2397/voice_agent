@@ -1,0 +1,5 @@
+{"conversation_snippet": "Distributor: How has the Bluechip Growth Fund performed over the last 3 years?", "expected_trigger": true, "expected_topic": "fund_performance", "notes": "direct performance question, clear trigger"}
+{"conversation_snippet": "Distributor: Nice weather today, how's your week going?", "expected_trigger": false, "expected_topic": "none", "notes": "small talk, must not trigger"}
+{"conversation_snippet": "Distributor: What's the expense ratio compared to the category average?", "expected_trigger": true, "expected_topic": "fund_comparison", "notes": "comparison request"}
+{"conversation_snippet": "Rep: Let me pull that up for you.", "expected_trigger": false, "expected_topic": "none", "notes": "rep filler, not a distributor query"}
+{"conversation_snippet": "Distributor: Is this fund riskier than what we discussed last quarter?", "expected_trigger": true, "expected_topic": "risk_comparison", "notes": "requires distributor memory + fund data together"}

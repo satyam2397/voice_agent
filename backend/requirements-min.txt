@@ -1,0 +1,27 @@
+# Minimal set to run the live audio pipeline as it stands today (Phase 1).
+#
+# Install into a venv, never into system/Anaconda Python:
+#   python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements-min.txt
+#
+# The full requirements.txt pulls torch, sentence-transformers, phoenix, ragas
+# and deepeval — several minutes and a few GB. None of it is needed until the
+# classifier and agent land. Install that when you reach Phase 4.
+#
+# Floors rather than hard pins: the old hard pins (uvicorn 0.30.6, websockets
+# 13.1) conflict with what mcp >=1.28 requires, and this project needs mcp from
+# Phase 5. Pin exactly once there is a lockfile.
+
+fastapi>=0.115
+uvicorn[standard]>=0.32
+websockets>=15
+pydantic-settings>=2.10
+
+# TLS trust for the outbound connection to Deepgram.
+#
+# truststore makes Python use the OS trust store instead of its own bundle.
+# Required on any network doing TLS inspection (Zscaler, Netskope, corporate
+# proxies): those re-sign certificates with a private root that lives in the
+# system keychain, which Python otherwise never consults. certifi is the
+# fallback for machines without such a proxy.
+truststore>=0.9
+certifi>=2024.7.4
